@@ -13,7 +13,7 @@
 <div class="container">
     <span>&#9829;</span>
     <button on:click={decrement}>-</button>
-    <span> {count}</span>
+    <span>{count}</span>
     <button on:click={increment}>+</button>
 </div>
 

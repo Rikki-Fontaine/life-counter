@@ -1,6 +1,4 @@
 <script>
-    
-
 	let count = 0;
 
 	function increment() {
@@ -13,9 +11,9 @@
 </script>
 
 <div class="container">
-    <span>&#9763;</span>
+    <span>&#x2623;</span>
     <button on:click={decrement}>-</button>
-    <span>{ count}</span>
+    <span>{count}</span>
     <button on:click={increment}>+</button>
 </div>
 

@@ -6,6 +6,7 @@
 
 
 <main>
+    <h1>Magic Life Counter (work in progress)</h1>
     <div class="display">
         <LifeCounter />
         <PoisonCounter />
@@ -24,7 +25,12 @@
         top: 50%;
         transform: translate(-50%,-50%);
     }
-       
+    
+    h1{
+        text-align: center;
+        color : white;
+    }
+
     .display{
         display: flex;
         flex-direction: column;
