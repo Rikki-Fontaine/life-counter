@@ -10,11 +10,12 @@
 	};
 </script>
 
-<span>Life:</span>
-<button on:click={decrement}>-</button>
-<span>{count}</span>
-<button on:click={increment}>+</button>
-
+<div class="container">
+    <span>&#9829;</span>
+    <button on:click={decrement}>-</button>
+    <span> {count}</span>
+    <button on:click={increment}>+</button>
+</div>
 
 
 <style>
@@ -22,5 +23,16 @@
         color : white;
         background-color: black;
         font-weight: bolder;
+    }
+
+    span{
+        font-weight: bolder;
+        margin: 10px;
+    }
+
+    .container {
+        width: fit-content;
+        padding: 5px;
+        margin: 5px;
     }
 </style>
