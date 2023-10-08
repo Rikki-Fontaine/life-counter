@@ -8,12 +8,14 @@
     function decrement() {
 		count -= 1;
 	};
+
+
 </script>
 
 <div class="container">
     <span>&#x2623;</span>
     <button on:click={decrement}>-</button>
-    <span>{count}</span>
+    <span class="count">{count}</span>
     <button on:click={increment}>+</button>
 </div>
 
@@ -23,7 +25,6 @@
         color : black;
         background-color: lightgreen;
         font-weight: bolder;
-        
     }
 
     span{
@@ -32,9 +33,15 @@
     }
 
     .container {
+        display: flex;
         width: fit-content;
         padding: 5px;
         margin: 5px;
+    }
+
+    .count{
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 </style>
 

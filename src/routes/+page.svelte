@@ -4,9 +4,9 @@
     import CmndCounter from "../components/cmndCounter.svelte";
 </script>
 
-
+<h1>Magic Life Counter (work in progress)</h1>
 <main>
-    <h1>Magic Life Counter (work in progress)</h1>
+    
     <div class="display">
         <LifeCounter />
         <PoisonCounter />
@@ -28,7 +28,7 @@
     
     h1{
         text-align: center;
-        color : white;
+        color : black;
     }
 
     .display{

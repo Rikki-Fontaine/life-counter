@@ -9,14 +9,27 @@
 		count -= 1;
 	};
 </script>
+<label>
+    <input type="radio" bind:group={count} value={20}/>
+    Standard
+</label>
 
+<label>
+    <input type="radio" bind:group={count} value={30}/>
+    2 Headed Giant
+</label>
+    
+    <label>
+        <input type="radio" bind:group={count} value={40}/>
+        Commander
+    </label>
+    
 <div class="container">
     <span>&#9829;</span>
     <button on:click={decrement}>-</button>
     <span>{count}</span>
     <button on:click={increment}>+</button>
 </div>
-
 
 <style>
     button {
@@ -31,6 +44,7 @@
     }
 
     .container {
+        display: flex;
         width: fit-content;
         padding: 5px;
         margin: 5px;

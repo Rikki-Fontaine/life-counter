@@ -32,6 +32,7 @@
     }
 
     .container {
+        display: flex;
         width: fit-content;
         padding: 5px;
         margin: 5px;
