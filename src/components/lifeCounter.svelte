@@ -1,29 +1,42 @@
 <script>
 	let count = 0;
 
-	function increment() {
+    const setLife20 = () => {
+        count = 20
+    };
+    
+    const setLife30 = () => {
+        count = 30
+    }; 
+
+    const setLife40 = () => {
+        count = 40
+    }; 
+
+	const increment = () => {
 		count += 1;
 	};
 
-    function decrement() {
+    const decrement = () => {
 		count -= 1;
 	};
 </script>
-<label>
-    <input type="radio" bind:group={count} value={20}/>
-    Standard
-</label>
 
-<label>
-    <input type="radio" bind:group={count} value={30}/>
-    2 Headed Giant
-</label>
-    
-    <label>
-        <input type="radio" bind:group={count} value={40}/>
+<div class="input-field">
+    <button on:click={setLife20}>
+        Standard
+    </button>
+
+    <button on:click={setLife30}>
+        2 Headed Giant
+    </button>
+
+    <button on:click={setLife40}>
         Commander
-    </label>
-    
+    </button>
+</div>
+
+
 <div class="container">
     <span>&#9829;</span>
     <button on:click={decrement}>-</button>
@@ -43,10 +56,21 @@
         margin: 10px;
     }
 
+    input{
+        color: wheat;
+    }
+
     .container {
         display: flex;
         width: fit-content;
         padding: 5px;
         margin: 5px;
+    }
+
+    .input-field{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 4rem;
+        gap: 2rem;
     }
 </style>
