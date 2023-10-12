@@ -1,6 +1,8 @@
 <script>
 	let count = 0;
-
+    let name = "";
+    let playerName = false
+    
     const setLife20 = () => {
         count = 20
     };
@@ -36,15 +38,25 @@
     </button>
 </div>
 
+<input class={playerName ? "hidden" : ""} bind:value={name} placeholder="enter your name" /> <button class={playerName ? "hidden" : ""} on:click={() => playerName = !playerName}>OK</button>
+<p class={playerName ? "up" : ""}>{name || ""}</p>
 
 <div class="container">
-    <span>&#9829;</span>
+    <span class="heart">&#9829;</span>
     <button on:click={decrement}>-</button>
     <span>{count}</span>
     <button on:click={increment}>+</button>
 </div>
 
 <style>
+    .up{
+        transform: translateY(-50px);
+    }
+
+    .hidden{
+        visibility: hidden;
+    }
+
     button {
         color : white;
         background-color: black;
@@ -56,8 +68,17 @@
         margin: 10px;
     }
 
+    .heart{
+        font-size: large;
+    }
+
+    p{
+        font-weight: bolder;
+        font-size: larger;
+    }
+
     input{
-        color: wheat;
+        color: black;
     }
 
     .container {
