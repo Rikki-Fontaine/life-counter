@@ -20,7 +20,7 @@
 <style>
     main{
         position: absolute;
-        width: 75%;
+        width: 100%;
         height: 75%;
         background-color: black;
         border: solid 2px red;
