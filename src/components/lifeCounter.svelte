@@ -25,16 +25,17 @@
 </script>
 
 <div class="input-field">
+    <span>Set Life:</span>
     <button on:click={setLife20}>
-        Standard
+        20
     </button>
 
     <button on:click={setLife30}>
-        2 Headed Giant
+        30
     </button>
 
     <button on:click={setLife40}>
-        Commander
+        40
     </button>
 </div>
 
@@ -93,5 +94,6 @@
         justify-content: space-around;
         margin-bottom: 4rem;
         gap: 2rem;
+        margin-top: 3rem;
     }
 </style>

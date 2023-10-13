@@ -1,9 +1,13 @@
-<div class="display">
+<script>
+    export let colors;
+</script>
+
+<div class={colors}>
     <slot/>
 </div>
 
 <style>
-        .display{
+        div{
         display: flex;
         flex-direction: column;
         position: absolute;
@@ -14,7 +18,9 @@
         padding: 10px;
         background-color: aqua;
         width: 75%;
-        height: 75%;
+        height: 100%;
         align-items: center;
+        padding: 1rem;
+
     }
 </style>
