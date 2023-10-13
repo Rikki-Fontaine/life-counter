@@ -10,8 +10,9 @@
 <h1>Magic Life Counter (work in progress)</h1>
 
 <main class = {theme}>
-    <Display colors= {theme} > <!--This has a colors prop I should be able to use to pass theme data to the display to match it to main-->
-        <div class="themeMenu">
+    <Display colors= {theme} > 
+        <div class="themeMenu">  <!--Buttons with functions to change the theme variable to reassign the class name-->
+            <p>Theme:</p>
             <button on:click={() => theme = "azorius"}>Azorius</button>
             <button on:click={() => theme = "gruul"}>Gruul</button>
         </div>
