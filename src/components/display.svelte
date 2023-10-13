@@ -1,5 +1,5 @@
 <script>
-    export let colors;
+    export let colors = theme;
 </script>
 
 <div class={colors}>
@@ -16,11 +16,19 @@
         transform: translate(-50%,-50%);
         border: solid 4px blue;
         padding: 10px;
-        background-color: aqua;
+        
         width: 75%;
         height: 100%;
         align-items: center;
         padding: 1rem;
 
+    }
+
+    .gruul{
+        background-color: red;
+    }
+
+    .azorius{
+        background-color: blue;
     }
 </style>
