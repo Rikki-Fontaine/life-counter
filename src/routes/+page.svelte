@@ -15,6 +15,7 @@
             <p>Theme:</p>
             <button on:click={() => theme = "azorius"}>Azorius</button>
             <button on:click={() => theme = "gruul"}>Gruul</button>
+            <button on:click={() => theme = "rakdos"}>Rakdos</button>
         </div>
         <LifeCounter>
         </LifeCounter>
@@ -47,6 +48,10 @@
 
     .azorius{
         background-color: white;
+    }
+
+    .rakdos{
+        background-color: black;
     }
 
     h1{

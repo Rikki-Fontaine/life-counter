@@ -31,4 +31,8 @@
     .azorius{
         background-color: blue;
     }
+
+    .rakdos{
+        background-color: red;
+    }
 </style>
