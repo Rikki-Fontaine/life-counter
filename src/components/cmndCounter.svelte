@@ -1,5 +1,7 @@
 <script>
-  
+    export let opponent = ""
+    export let opName = "opNameHidden"
+    export let textBox = "textBoxVisible"
 	let count = 0;
 
 	function increment() {
@@ -12,7 +14,8 @@
 </script>
 
 <div class="container">
-    <span>&#9733;</span>
+    <input bind:value={opponent} class={textBox}><button class={textBox} on:click={() => opName = "opNameVisible"}  on:click={() => textBox = "textBoxHidden"}>OK</button>
+    <span class={opName}>{opponent}</span>
     <button on:click={decrement}>-</button>
     <span>{count}</span>
     <button on:click={increment}>+</button>
@@ -36,5 +39,25 @@
         width: fit-content;
         padding: 5px;
         margin: 5px;
+    }
+
+    .inputBtn{
+        font-weight: 100;
+    }
+
+    .opNameHidden{
+        display: none;
+    }
+
+    .opNameVisible{
+        display: block;
+    }
+
+    .textBoxHidden{
+        display: none;
+    }
+
+    .textBoxVisible{
+        display: block;
     }
 </style>

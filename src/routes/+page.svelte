@@ -3,6 +3,7 @@
     import PoisonCounter from "../components/poisonCounter.svelte";
     import CmndCounter from "../components/cmndCounter.svelte";
     import Display from "../components/display.svelte";
+  import CommandDisplay from "../components/commandDisplay.svelte";
     export let theme = "gruul"
 
 </script>
@@ -20,7 +21,12 @@
         <LifeCounter>
         </LifeCounter>
         <PoisonCounter />
-        <CmndCounter />
+        <CommandDisplay>
+            <CmndCounter />
+            <CmndCounter />
+            <CmndCounter />
+        </CommandDisplay>
+        
     </Display>
 </main>
 
