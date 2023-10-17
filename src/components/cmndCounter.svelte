@@ -14,7 +14,7 @@
 </script>
 
 <div class="container">
-    <input bind:value={opponent} class={textBox}><button class={textBox} on:click={() => opName = "opNameVisible"}  on:click={() => textBox = "textBoxHidden"}>OK</button>
+    <input bind:value={opponent} placeholder="opponent name" class={textBox}><button class={textBox} on:click={() => opName = "opNameVisible"}  on:click={() => textBox = "textBoxHidden"}>OK</button>
     <span class={opName}>{opponent}</span>
     <button on:click={decrement}>-</button>
     <span>{count}</span>
