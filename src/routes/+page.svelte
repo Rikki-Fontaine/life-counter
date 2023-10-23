@@ -4,6 +4,8 @@
     import CmndCounter from "../components/cmndCounter.svelte";
     import Display from "../components/display.svelte";
     import CommandDisplay from "../components/commandDisplay.svelte";
+    import CounterDisplay from "../components/counterDisplay.svelte";
+    import SetLife from "../components/setLife.svelte";
     export let theme = "gruul"
 </script>
 
@@ -18,9 +20,10 @@
             <button on:click={() => theme = "rakdos"}>Rakdos</button>
         </div>
 
-        <LifeCounter />
-        <PoisonCounter />
-        
+       <div class = "counterContainer">
+            <LifeCounter />
+            <PoisonCounter />
+        </div>
         <CommandDisplay>
             <CmndCounter />
             <CmndCounter />
@@ -65,5 +68,10 @@
         color : black;
     }
 
+    .counterContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
    
 </style>

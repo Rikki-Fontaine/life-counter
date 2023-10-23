@@ -21,34 +21,39 @@
 
     const decrement = () => {
 		count -= 1;
-	};
+	}; 
+    
 </script>
 
-<div class="input-field">
-    <span>Set Life:</span>
-    <button on:click={setLife20}>
-        20
-    </button>
+<div class="lifeHolder">
+    <div class="input-field">
+        <span>Set Life:</span>
+        <button on:click={setLife20}>
+            20
+        </button>
 
-    <button on:click={setLife30}>
-        30
-    </button>
+        <button on:click={setLife30}>
+            30
+        </button>
 
-    <button on:click={setLife40}>
-        40
-    </button>
+        <button on:click={setLife40}>
+            40
+        </button>
+    </div>
+
+    <input class={playerName ? "hidden" : ""} bind:value={name} placeholder="enter your name" /> <button class={playerName ? "hidden" : ""} on:click={() => playerName = !playerName}>OK</button>
+    <p class={playerName ? "up" : ""}>{name || ""}</p>
+
+<!-- The Items above need to be put into their own components and still able to perform their function-->
+
+
+    <div class="container">
+        <span class="heart">&#9829;</span>
+        <button on:click={decrement}>-</button>
+        <span>{count}</span>
+        <button on:click={increment}>+</button>
+    </div>
 </div>
-
-<input class={playerName ? "hidden" : ""} bind:value={name} placeholder="enter your name" /> <button class={playerName ? "hidden" : ""} on:click={() => playerName = !playerName}>OK</button>
-<p class={playerName ? "up" : ""}>{name || ""}</p>
-
-<div class="container">
-    <span class="heart">&#9829;</span>
-    <button on:click={decrement}>-</button>
-    <span>{count}</span>
-    <button on:click={increment}>+</button>
-</div>
-
 <style>
     .up{
         transform: translateY(-50px);
@@ -95,5 +100,9 @@
         margin-bottom: 4rem;
         gap: 2rem;
         margin-top: 3rem;
+    }
+
+    .lifeHolder{
+        display: block;
     }
 </style>
