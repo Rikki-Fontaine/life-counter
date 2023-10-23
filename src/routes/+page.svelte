@@ -3,9 +3,8 @@
     import PoisonCounter from "../components/poisonCounter.svelte";
     import CmndCounter from "../components/cmndCounter.svelte";
     import Display from "../components/display.svelte";
-  import CommandDisplay from "../components/commandDisplay.svelte";
+    import CommandDisplay from "../components/commandDisplay.svelte";
     export let theme = "gruul"
-
 </script>
 
 <h1>Magic Life Counter (work in progress)</h1>
@@ -18,9 +17,10 @@
             <button on:click={() => theme = "gruul"}>Gruul</button>
             <button on:click={() => theme = "rakdos"}>Rakdos</button>
         </div>
-        <LifeCounter>
-        </LifeCounter>
+
+        <LifeCounter />
         <PoisonCounter />
+        
         <CommandDisplay>
             <CmndCounter />
             <CmndCounter />
