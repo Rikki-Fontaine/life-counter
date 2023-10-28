@@ -1,45 +1,26 @@
 <script>
-	let count = 0;
+    import {life} from '../store'
     let name = "";
     let playerName = false
     
-    const setLife20 = () => {
-        count = 20
-    };
-    
-    const setLife30 = () => {
-        count = 30
-    }; 
-
-    const setLife40 = () => {
-        count = 40
-    }; 
 
 	const increment = () => {
-		count += 1;
+		lifeTotal += 1;
 	};
 
     const decrement = () => {
-		count -= 1;
+		lifeTotal -= 1;
 	}; 
+
+    let lifeTotal;
+    const unsubscribe = life.subscribe((value) => {
+		lifeTotal = value;
+	});
     
 </script>
 
 <div class="lifeHolder">
-    <div class="input-field">
-        <span>Set Life:</span>
-        <button on:click={setLife20}>
-            20
-        </button>
-
-        <button on:click={setLife30}>
-            30
-        </button>
-
-        <button on:click={setLife40}>
-            40
-        </button>
-    </div>
+    
 
     <input class={playerName ? "hidden" : ""} bind:value={name} placeholder="enter your name" /> <button class={playerName ? "hidden" : ""} on:click={() => playerName = !playerName}>OK</button>
     <p class={playerName ? "up" : ""}>{name || ""}</p>
@@ -50,7 +31,7 @@
     <div class="container">
         <span class="heart">&#9829;</span>
         <button on:click={decrement}>-</button>
-        <span>{count}</span>
+        <span>{lifeTotal}</span>
         <button on:click={increment}>+</button>
     </div>
 </div>
