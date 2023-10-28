@@ -7,6 +7,7 @@
     import CounterDisplay from "../components/counterDisplay.svelte";
     import SetLife from "../components/setLife.svelte";
     export let theme = "gruul"
+    
 </script>
 
 <h1>Magic Life Counter (work in progress)</h1>
@@ -21,6 +22,7 @@
         </div>
 
        <div class = "counterContainer">
+            <SetLife/>
             <LifeCounter />
             <PoisonCounter />
         </div>
