@@ -6,6 +6,7 @@
     import CommandDisplay from "../components/commandDisplay.svelte";
     import CounterDisplay from "../components/counterDisplay.svelte";
     import SetLife from "../components/setLife.svelte";
+    import Playername from "../components/playername.svelte";
     export let theme = "gruul"
     
 </script>
@@ -23,6 +24,7 @@
 
        <div class = "counterContainer">
             <SetLife/>
+            <Playername/>
             <LifeCounter />
             <PoisonCounter />
         </div>

@@ -1,30 +1,52 @@
 <script>
 import {life} from '../store'
 
-const setLife20 = () => {
-    count = 20
-};
+function lifeTwenty(){
+    life.set(20)
+}
 
-const setLife30 = () => {
-    count = 30
-}; 
+function lifeThirty(){
+    life.set(30)
+}
 
-const setLife40 = () => {
-    count = 40
-}; 
+function lifeFourty(){
+    life.set(40)
+}
+
+    let lifeTotal;
+    const unsubscribe = life.subscribe((value) => {
+		lifeTotal = value;
+	});
 </script>
 
 <div class="input-field">
     <span>Set Life:</span>
-    <button on:click={setLife20}>
+    <button on:click={lifeTwenty}>
         20
     </button>
 
-    <button on:click={setLife30}>
+    <button on:click={lifeThirty}>
         30
     </button>
 
-    <button on:click={setLife40}>
+    <button on:click={lifeFourty}>
         40
     </button>
 </div>
+
+<style>
+    .input-field{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 4rem;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    button{
+        background-color: black;
+        color: white;
+    }
+
+    
+</style>
