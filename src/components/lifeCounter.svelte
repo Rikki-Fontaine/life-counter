@@ -48,5 +48,6 @@
         padding: 5px;
         margin: 5px;
         margin-right: 5px;
+        text-align: center;
     }
 </style>
