@@ -14,6 +14,7 @@
 	};
 </script>
 
+
 <div class="container">
     <input bind:value={opponent} placeholder="opponent name" class={textBox}><button class={okBtn} {textBox} on:click={() => opName = "opNameVisible"}  on:click={() => textBox = "textBoxHidden"} on:click={() => okBtn = "okBtnHidden"}>OK</button>
     <span class={opName}>{opponent}</span>

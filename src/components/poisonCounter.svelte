@@ -12,14 +12,14 @@
 
 </script>
 
-<div class="poisonHolder">
+
     <div class="container">
         <span>&#x2623;</span>
-        <button on:click={decrement}>-</button>
-        <span class="count">{count}</span>
         <button on:click={increment}>+</button>
+        <span class="count">{count}</span>
+        <button on:click={decrement}>-</button>
     </div>
-</div>
+
 
 <style>
     button {
@@ -35,6 +35,7 @@
 
     .container {
         display: flex;
+        flex-direction: column;
         width: fit-content;
         padding: 5px;
         margin: 5px;
@@ -45,9 +46,7 @@
         margin-right: 1rem;
     }
 
-    .poisonHolder{
-        display: inline;
-    }
+  
 </style>
 
 
